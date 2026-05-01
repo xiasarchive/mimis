@@ -4,55 +4,65 @@ html {
 }
 
 
-#cpage {
-    position: fixed;
-   background-color: black;
-   height: 100%;
-   width: 100%;
-   margin: 0, auto;
-   overflow: hidden;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   min-height: 100vh;
-}
-
-.coin {
-   width: 50%;
-  z-index: 10;
-  position: fixed;
-}
 
 
 #page {
-    position: fixed;
     background-color: rgba(0, 0, 0, 0);
-    height: 100%;
-    width: 100%;
-    margin: 0, auto;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;
+    flex-direction: column;
+    margin-top: 50px;
+ }
+
+ #info {
+    color: white;
+    font-family: serif;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smooithing: grayscale;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    text-justify: inter-word;
+
+
+ }
+
+ #info h1{
+    font-size: 20px;
+    text-align: center;
+ }
+
+ #info p{
+    font-size: 15px;
+    text-align: center;
  }
 
 #text {
-  position: fixed;
   text-align: center;
-  z-index: 1;
-  font-size: 200%;
+  z-index: 10;
+  font-size: 75px;
+  margin-bottom: -20;
+    font-family: "Comic Sans MS";
   
- background: linear-gradient(270deg, #ff0000, #ff7e00, #ffee00, #02ff00, #001cff, #af00ff);
+     background: linear-gradient(270deg, #ff0000, #ff7e00, #ffee00, #02ff00, #001cff, #af00ff);
     background-size: 1200% 1200%;
 
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-animation: AnimationName 10s ease infinite;
     animation: AnimationName 10s ease infinite;
 }
+
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -65,8 +75,14 @@ html {
   
 }
 
+#hands{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .hand1 {
-  position: sticky;
   rotate: -90deg;
   width: 15%;
    z-index: 2;
@@ -74,8 +90,6 @@ html {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: -3%;
-    margin-top: 15%;
 }
  
 @keyframes floating {
@@ -86,7 +100,6 @@ html {
 
 
 .hand2 {
-  position: sticky;
   rotate: 75deg;
   width: 14%;
   z-index: 2;
@@ -94,14 +107,12 @@ html {
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    margin-left: 10%;
-    margin-top: 15%;
 }
  
 .confetti {
   width: 80%;
   position: fixed;
+  z-index: 0;
   
 }
-
 
